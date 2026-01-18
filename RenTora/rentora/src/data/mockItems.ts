@@ -5,6 +5,7 @@ export interface RentalItem {
   title: string;
   category: string;
   pricePerDay: number;
+  securityDeposit: number;
   location: string;
   rating: number;
   reviews: number;
@@ -18,6 +19,7 @@ export const MOCK_ITEMS: RentalItem[] = [
     title: "Sony Alpha a7 IV Camera",
     category: "Cameras",
     pricePerDay: 2500,
+    securityDeposit: 15000,
     location: "Mumbai",
     rating: 4.9,
     reviews: 128,
@@ -30,6 +32,7 @@ export const MOCK_ITEMS: RentalItem[] = [
     title: "DJI Mavic 3 Pro Drone",
     category: "Drones",
     pricePerDay: 3200,
+    securityDeposit: 20000,
     location: "Pune",
     rating: 4.8,
     reviews: 94,
@@ -42,6 +45,7 @@ export const MOCK_ITEMS: RentalItem[] = [
     title: "MacBook Pro M2",
     category: "Laptops",
     pricePerDay: 1800,
+    securityDeposit: 12000,
     location: "Bangalore",
     rating: 4.7,
     reviews: 76,
@@ -54,11 +58,11 @@ export const MOCK_ITEMS: RentalItem[] = [
     title: "Royal Enfield Classic 350",
     category: "Bikes",
     pricePerDay: 1200,
+    securityDeposit: 8000,
     location: "Delhi",
     rating: 4.6,
     reviews: 64,
-    image:
-      "https://images.unsplash.com/photo-1616469832301-ffaeadc68cf5?q=80&w=800",
+    image: "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?q=80&w=800",
     featured: true,
   },
 ];

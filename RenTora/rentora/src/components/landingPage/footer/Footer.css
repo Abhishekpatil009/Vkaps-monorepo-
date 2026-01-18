@@ -1,0 +1,24 @@
+.footer-title {
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: #ffffff;
+  margin-bottom: 2.5rem;
+  border-left: 2px solid #5A80E9;
+  padding-left: 1rem;
+}
+
+/* Neon pulse animation (replaces style jsx) */
+@keyframes neon-pulse {
+  0%, 100% {
+    text-shadow: 0 0 0px #5A80E9;
+  }
+  50% {
+    text-shadow: 0 0 15px #5A80E9, 0 0 25px #A8C5FF;
+  }
+}
+
+.neon-pulse {
+  animation: neon-pulse 2s infinite ease-in-out;
+}

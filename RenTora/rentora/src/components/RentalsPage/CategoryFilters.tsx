@@ -2,18 +2,21 @@
 
 import { Camera, Bike, Laptop, Wrench, LayoutGrid } from "lucide-react";
 import type { ElementType } from "react";
-import { RentalCategory } from "@/lib/rental.types";
+import type { RentalCategory } from "@/lib/rental.types";
+
+type CategoryFilter = RentalCategory | "All";
 
 type CategoryOption = {
-  label: RentalCategory;
+  label: CategoryFilter;
   icon: ElementType;
-}
+};
+
 export default function CategoryFilters({
   active,
   onSelect,
 }: {
-  active: RentalCategory;
-  onSelect: (c: RentalCategory) => void;
+  active: CategoryFilter;
+  onSelect: (c: CategoryFilter) => void;
 }) {
   const categories: CategoryOption[] = [
     { label: "All", icon: LayoutGrid },

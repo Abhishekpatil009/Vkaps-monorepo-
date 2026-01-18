@@ -1,0 +1,145 @@
+.featured-card {
+  position: relative;
+  background: #12131c;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: transform 0.2s ease;
+  will-change: transform;
+}
+
+/* Image */
+.featured-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.featured-card:hover .featured-image {
+  transform: scale(1.1) rotate(1deg);
+}
+
+/* Glare */
+.glare-gradient {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  background: radial-gradient(
+    circle at var(--glare-x, 50%) var(--glare-y, 50%),
+    rgba(255,255,255,0.8),
+    transparent 60%
+  );
+}
+
+.featured-card:hover .glare-gradient {
+  opacity: 0.18;
+}
+
+/* Animation */
+@keyframes slide-up-fade {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up-fade {
+  animation: slide-up-fade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* UI Bits */
+.deposit-badge {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  padding: 0.4rem 0.9rem;
+  background: rgba(13,17,23,0.8);
+  backdrop-filter: blur(8px);
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #a8c5ff;
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #12131c, transparent);
+}
+
+.content {
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.rating {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.category {
+  margin-top: 0.5rem;
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #c5c8d7;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding-top: 1rem;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 900;
+  color: white;
+}
+
+.per-day {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #c5c8d7;
+}
+
+.rent-btn {
+  padding: 0.75rem 1.5rem;
+  background: #5a80e9;
+  color: white;
+  border-radius: 1.25rem;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rent-btn:hover {
+  box-shadow: 0 0 30px rgba(90,128,233,0.5);
+}
+
+.rent-btn:active {
+  transform: scale(0.9) rotate(2deg);
+}
